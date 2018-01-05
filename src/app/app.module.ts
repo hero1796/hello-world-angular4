@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { CmcGlobalComponent } from './cmc-global.component';
 import { UseCliComponent } from './use-cli/use-cli.component';
 import { CmcGlobalService } from  './cmc-global.service';
- 
+import { FormsModule } from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +12,8 @@ import { CmcGlobalService } from  './cmc-global.service';
     UseCliComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [
     CmcGlobalService
