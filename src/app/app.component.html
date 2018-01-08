@@ -1,17 +1,9 @@
-<favorite [is-favorite] = "post.isFavorite" (on-change) = "onFavoriteChanged($event)"></favorite>
-<div *ngIf = "courses.length > 0; then coursesList else noCourses"></div>
-
-<ng-template #coursesList>
-	<div>List of courses: </div>
-</ng-template>
-
-<ng-template #noCourses>
-	<div>No courses yet</div>
-</ng-template>
-
-
-
-<favorite [is-favorite] = "post.isFavorite" (on-change) = "onFavoriteChanged($event)"></favorite>
-<div [hidden] = "courses.length == 0">List of courses: </div>
-
-
+<ul class = "nav nav-pills">
+	<li [class.active] = "viewModel == 'map'" (click) = "viewModel = 'map'"><a>Map view</a></li>
+	<li [class.active] = "viewModel == 'list'" (click) = "viewModel = 'list'"><a>List view</a></li>
+</ul>
+<div [ngSwitch] = "viewModel">
+	<div *ngSwitchCase = "'map'">Map view content</div>
+	<div *ngSwitchCase = "'list'">List view content</div>
+	<div *ngSwitchDefault>Otherwise</div>
+</div>
