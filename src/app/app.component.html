@@ -1,2 +1,15 @@
 <favorite [is-favorite] = "post.isFavorite" (on-change) = "onFavoriteChanged($event)"></favorite>
+<div *ngIf = "courses.length > 0; then coursesList else noCourses"></div>
+
+<ng-template #coursesList>
+	<div>List of courses: </div>
+</ng-template>
+
+<ng-template #noCourses>
+	<div>No courses yet</div>
+</ng-template>
+<!-- <div *ngIf = "courses.length == 0">
+	No courses yet	
+</div> -->
+
 
