@@ -4,12 +4,14 @@ import { AppComponent } from './app.component';
 import { CmcGlobalComponent } from './cmc-global.component';
 import { UseCliComponent } from './use-cli/use-cli.component';
 import { CmcGlobalService } from  './cmc-global.service';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { FavoriteComponent } from './favorite/favorite.component'
 @NgModule({
   declarations: [
     AppComponent,
     CmcGlobalComponent,
-    UseCliComponent
+    UseCliComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
