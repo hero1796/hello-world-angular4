@@ -8,8 +8,10 @@
 <ng-template #noCourses>
 	<div>No courses yet</div>
 </ng-template>
-<!-- <div *ngIf = "courses.length == 0">
-	No courses yet	
-</div> -->
+
+
+
+<favorite [is-favorite] = "post.isFavorite" (on-change) = "onFavoriteChanged($event)"></favorite>
+<div [hidden] = "courses.length == 0">List of courses: </div>
 
 
