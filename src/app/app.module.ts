@@ -5,13 +5,16 @@ import { CmcGlobalComponent } from './cmc-global.component';
 import { CmcGlobalService } from  './cmc-global.service';
 import { FormsModule } from '@angular/forms';
 import { FavoriteComponent } from './favorite/favorite.component';
-import { ContactFormComponent } from './contact-form/contact-form.component'
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { PostsComponent } from './posts/posts.component';
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
     CmcGlobalComponent,
     FavoriteComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
